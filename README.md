@@ -7,6 +7,7 @@ sudo apt install fortune-mod cowsay -y
 ```
 
 
+
 ## How to use?
 
 1. Run `./wisecow.sh`
