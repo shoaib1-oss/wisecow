@@ -1,22 +1,19 @@
-# Use a lightweight base image
+# Use the latest Ubuntu image as the base
 FROM ubuntu:latest
 
-# Install required packages
+# Install necessary packages and set noninteractive frontend
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
-    apt-get install -y fortune-mod cowsay netcat && \
+    apt-get install -y apt-utils fortune-mod cowsay netcat-openbsd && \
     apt-get clean
 
-# Set the working directory
-WORKDIR /app
+# Copy application script into the container
+COPY wisecow.sh /app/wisecow.sh
+RUN chmod +x /app/wisecow.sh
 
-# Copy the wisecow.sh script into the container
-COPY wisecow.sh .
-
-# Make the script executable
-RUN chmod +x wisecow.sh
-
-# Expose the application's port
+# Expose port
 EXPOSE 4499
 
-# Start the application
-CMD ["./wisecow.sh"]
+# Run the application
+CMD ["/app/wisecow.sh"]
+
