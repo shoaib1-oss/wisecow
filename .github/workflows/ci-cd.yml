@@ -32,14 +32,20 @@ jobs:
       - name: Push Docker image
         run: docker push shoaibdocker1/wisecow:latest
 
-      # 6. Set up kubeconfig for Kubernetes cluster
-      - name: Set up kubeconfig
-        run: |
-          mkdir -p $HOME/.kube
-          echo "${{ secrets.KUBECONFIG_DATA }}" | tr -d '\n' | base64 --decode > $HOME/.kube/config
-          chmod 600 $HOME/.kube/config
+      # 6. Configure AWS credentials for GitHub Actions
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      # 7. Deploy to Kubernetes
+      # 7. Update kubeconfig for EKS cluster
+      - name: Update kubeconfig
+        run: |
+          aws eks update-kubeconfig --name wisecow-cluster --region ${{ secrets.AWS_REGION }}
+
+      # 8. Deploy application to Kubernetes
       - name: Deploy to Kubernetes
         run: |
           kubectl apply -f Deployment.yaml
