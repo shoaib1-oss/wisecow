@@ -1,0 +1,40 @@
+# Ignore archives and binaries
+*.zip
+*.tar
+*.tar.gz
+*.jar
+*.war
+*.exe
+*.dll
+*.so
+
+# Ignore Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignore Python stuff
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Ignore Git and CI files
+.git
+.gitignore
+.dockerignore
+.github/
+
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore local build artifacts
+dist/
+build/
+*.log
