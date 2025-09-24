@@ -1,0 +1,41 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-1:845839436593:stack/eksctl-wisecow-cluster-cluster/b35c70c0-993d-11f0-8241-0ecdb2169a8f",
+            "StackName": "eksctl-wisecow-cluster-cluster",
+            "Description": "EKS cluster (dedicated VPC: true, dedicated IAM: true) [created and managed by eksctl]",
+            "CreationTime": "2025-09-24T11:57:53.024000+00:00",
+            "DeletionTime": "2025-09-24T12:01:16.308000+00:00",
+            "RollbackConfiguration": {},
+            "StackStatus": "DELETE_FAILED",
+            "StackStatusReason": "The following resource(s) failed to delete: [ServiceRole]. ",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_IAM"
+            ],
+            "Tags": [
+                {
+                    "Key": "alpha.eksctl.io/cluster-name",
+                    "Value": "wisecow-cluster"
+                },
+                {
+                    "Key": "eksctl.cluster.k8s.io/v1alpha1/cluster-name",
+                    "Value": "wisecow-cluster"
+                },
+                {
+                    "Key": "alpha.eksctl.io/cluster-oidc-enabled",
+                    "Value": "false"
+                },
+                {
+                    "Key": "alpha.eksctl.io/eksctl-version",
+                    "Value": "0.214.0"
+                }
+            ],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
