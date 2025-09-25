@@ -1,0 +1,55 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTUtUVnhLTkJwUXd3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBNU1qUXhNakV6TkRWYUZ3MHpOVEE1TWpJeE1qRTRORFZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM5clU4VlRlUlVFYmpCUEpwN0FpRnBaQlB2ejdSVGEyeDFqaldPNVRXekx5V1JiZkJobnhNaHk1WXoKOHlBUmNXN1QvNmVOU0NrL3RLTXhiU0xGOFFsMFZxNUFkUFp5VCt3b1RpVFh1YUU0RStnNXRldjZzckhrRG1QcAp4ZVJ0TncvQ1FLcldKaDArRUx5THoyK2pVZGd0ODdLdUgrTmNDSUZJa0VNQ0h5VkNTUEZwMjRReW5lNTJjZEVWCmFLMmRnZVdoTWtkb0dCYVpNdzB2b1pidGJ1M29nR3hPY05CZ04wQktBZnV1SyswZCtDcEJjNCtuSGdiZFJ1WlMKSjJIRDhZSjloMldJWHZVKzQraUdwWG9RcGJyMmhSeU5BQUYrUmo5ZGMrV1FXamJtcFI2UlNiTTc2TXVEZzYzRQpyNlZQOXZyVHpKc2tHWFdFeW9XZjUwMGVpdm5GQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSY2tGL0RrbU9qdm9SdmExSHNiWldsd3Fla3JUQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQnpYb2piT3BVaAo3eGZKbFM1Mk5PK2xXQzlGblZRdHhOZWszejhDY05ZN2puR0gxOFlUbis0b1cvSmNnSERmK1RTQlRlUU51MTVkCjZaemJhaEhtNVdURHo4STlzUTFOUmxIWjlEMVcxWjBTR0ZpNktsZFNPbm4xTWRDN2VhUUZ2U2hXSXZEVEdMalUKSmFlWGE3T0c4bWViWWladTlhV2IvczI2SnBTd2lPYUpHaDN5cnJhQXkzN2pBZ0NWdWFtSmR6dTNhTEhIc2QxegpGUS9NaXo2Zkp5bmdDVnZLY2hxZkl1SGlOZGFsWFFjYk5ncXZCVW5UVllVVi9nYjB3c0xya05QQTNuNS9hVW5OCjVFZlA4cjJJSElwTTZjaVZXeU4zZTFIbnkveU4zc202NEh3TVE2NVdZYmNYakozY0hWSmtNMFV1UmhpWCtTTlAKeUxmUmRLc21YNTdNCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://C6D36D933B54908F51826C232CC88BE7.gr7.us-east-1.eks.amazonaws.com
+  name: wisecow-cluster.us-east-1.eksctl.io
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTUtUVnhLTkJwUXd3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TlRBNU1qUXhNakV6TkRWYUZ3MHpOVEE1TWpJeE1qRTRORFZhTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUM5clU4VlRlUlVFYmpCUEpwN0FpRnBaQlB2ejdSVGEyeDFqaldPNVRXekx5V1JiZkJobnhNaHk1WXoKOHlBUmNXN1QvNmVOU0NrL3RLTXhiU0xGOFFsMFZxNUFkUFp5VCt3b1RpVFh1YUU0RStnNXRldjZzckhrRG1QcAp4ZVJ0TncvQ1FLcldKaDArRUx5THoyK2pVZGd0ODdLdUgrTmNDSUZJa0VNQ0h5VkNTUEZwMjRReW5lNTJjZEVWCmFLMmRnZVdoTWtkb0dCYVpNdzB2b1pidGJ1M29nR3hPY05CZ04wQktBZnV1SyswZCtDcEJjNCtuSGdiZFJ1WlMKSjJIRDhZSjloMldJWHZVKzQraUdwWG9RcGJyMmhSeU5BQUYrUmo5ZGMrV1FXamJtcFI2UlNiTTc2TXVEZzYzRQpyNlZQOXZyVHpKc2tHWFdFeW9XZjUwMGVpdm5GQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSY2tGL0RrbU9qdm9SdmExSHNiWldsd3Fla3JUQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQnpYb2piT3BVaAo3eGZKbFM1Mk5PK2xXQzlGblZRdHhOZWszejhDY05ZN2puR0gxOFlUbis0b1cvSmNnSERmK1RTQlRlUU51MTVkCjZaemJhaEhtNVdURHo4STlzUTFOUmxIWjlEMVcxWjBTR0ZpNktsZFNPbm4xTWRDN2VhUUZ2U2hXSXZEVEdMalUKSmFlWGE3T0c4bWViWWladTlhV2IvczI2SnBTd2lPYUpHaDN5cnJhQXkzN2pBZ0NWdWFtSmR6dTNhTEhIc2QxegpGUS9NaXo2Zkp5bmdDVnZLY2hxZkl1SGlOZGFsWFFjYk5ncXZCVW5UVllVVi9nYjB3c0xya05QQTNuNS9hVW5OCjVFZlA4cjJJSElwTTZjaVZXeU4zZTFIbnkveU4zc202NEh3TVE2NVdZYmNYakozY0hWSmtNMFV1UmhpWCtTTlAKeUxmUmRLc21YNTdNCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://C6D36D933B54908F51826C232CC88BE7.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:845839436593:cluster/wisecow-cluster
+contexts:
+- context:
+    cluster: wisecow-cluster.us-east-1.eksctl.io
+    user: s3-las@wisecow-cluster.us-east-1.eksctl.io
+  name: s3-las@wisecow-cluster.us-east-1.eksctl.io
+- context:
+    cluster: arn:aws:eks:us-east-1:845839436593:cluster/wisecow-cluster
+    user: arn:aws:eks:us-east-1:845839436593:cluster/wisecow-cluster
+  name: arn:aws:eks:us-east-1:845839436593:cluster/wisecow-cluster
+current-context: arn:aws:eks:us-east-1:845839436593:cluster/wisecow-cluster
+kind: Config
+preferences: {}
+users:
+- name: s3-las@wisecow-cluster.us-east-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --output
+      - json
+      - --cluster-name
+      - wisecow-cluster
+      - --region
+      - us-east-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false
+- name: arn:aws:eks:us-east-1:845839436593:cluster/wisecow-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - wisecow-cluster
+      - --output
+      - json
+      command: aws
