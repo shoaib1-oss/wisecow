@@ -3,16 +3,16 @@ kind: Ingress
 metadata:
   name: wisecow-ingress
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
     nginx.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
   tls:
     - hosts:
-        - wisecow.example.com   # replace with your domain
+        - shoaibcloud.bio   # your actual domain
       secretName: wisecow-tls
   rules:
-    - host: wisecow.example.com
+    - host: shoaibcloud.bio
       http:
         paths:
           - path: /
@@ -21,4 +21,4 @@ spec:
               service:
                 name: wisecow-service
                 port:
-                  number: 4499
+                  number: 80
