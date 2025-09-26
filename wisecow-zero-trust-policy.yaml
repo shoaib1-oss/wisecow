@@ -1,0 +1,20 @@
+apiVersion: security.kubearmor.com/v1
+kind: KubeArmorPolicy
+metadata:
+  name: wisecow-zero-trust
+spec:
+  selector:
+    matchLabels:
+      app: wisecow-deployment   # must exactly match your pod labels
+  process:
+    matchPaths:
+      - path: /app/wisecow
+        action: Allow
+  file:
+    matchPaths:
+      - path: /etc/shadow
+        action: Block
+      - path: /etc/passwd
+        action: Block
+      - path: /tmp
+        action: Audit

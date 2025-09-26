@@ -1,37 +1,37 @@
 import psutil
 import time
+import logging
 
-# Define thresholds
-CPU_THRESHOLD = 80  # percent
-MEMORY_THRESHOLD = 80  # percent
-DISK_THRESHOLD = 80  # percent
+# Setup logging (to file and console)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("system_health.log"),
+        logging.StreamHandler()  # this prints to console
+    ]
+)
 
-LOG_FILE = "system_health.log"
-
-def log_message(message):
-    """Write message to log file with timestamp."""
-    with open(LOG_FILE, "a") as log:
-        log.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
+# Thresholds
+CPU_THRESHOLD = 80
+MEMORY_THRESHOLD = 80
+DISK_THRESHOLD = 80
 
 def check_system_health():
-    """Check CPU, Memory, Disk, and Processes."""
     cpu = psutil.cpu_percent(interval=1)
     memory = psutil.virtual_memory().percent
-    disk = psutil.disk_usage('/').percent
+    disk = psutil.disk_usage("/").percent
 
-    log_message(f"CPU: {cpu}% | Memory: {memory}% | Disk: {disk}%")
+    logging.info(f"CPU: {cpu}%, Memory: {memory}%, Disk: {disk}%")
 
     if cpu > CPU_THRESHOLD:
-        log_message(f"ALERT: CPU usage high at {cpu}%")
+        logging.warning(f"High CPU Usage: {cpu}%")
     if memory > MEMORY_THRESHOLD:
-        log_message(f"ALERT: Memory usage high at {memory}%")
+        logging.warning(f"High Memory Usage: {memory}%")
     if disk > DISK_THRESHOLD:
-        log_message(f"ALERT: Disk usage high at {disk}%")
-
-    processes = len(psutil.pids())
-    log_message(f"Running processes: {processes}")
+        logging.warning(f"High Disk Usage: {disk}%")
 
 if __name__ == "__main__":
     while True:
         check_system_health()
-        time.sleep(10)  # check every 10 seconds
+        time.sleep(10)
